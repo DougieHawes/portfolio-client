@@ -1,12 +1,11 @@
 // style imports
 import "./style.min.css";
 
+// util component imports
+import { Route1 } from "../utils/routes";
+
 const Skills = () => {
-  return (
-    <div className="route skills">
-      <h2 className="route-title">skills</h2>
-    </div>
-  );
+  return <Route1 path="skills" />;
 };
 
 export default Skills;

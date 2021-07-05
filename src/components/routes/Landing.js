@@ -1,10 +1,18 @@
+// dependency imports
+import { Fade } from "react-reveal";
+
 // style imports
 import "./style.min.css";
+
+// image imports
+import logo from "../../media/layout/landing-logo.png";
 
 const Landing = () => {
   return (
     <div className="route landing">
-      <h2 className="route-title">landing</h2>
+      <Fade duration={4200}>
+        <img className="landing-logo" src={logo} alt="" />
+      </Fade>
     </div>
   );
 };

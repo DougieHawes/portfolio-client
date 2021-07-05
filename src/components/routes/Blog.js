@@ -1,12 +1,11 @@
 // style imports
 import "./style.min.css";
 
+// util component imports
+import { Route1 } from "../utils/routes";
+
 const Blog = () => {
-  return (
-    <div className="route blog">
-      <h2 className="route-title">blog</h2>
-    </div>
-  );
+  return <Route1 path="blog" />;
 };
 
 export default Blog;

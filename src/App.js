@@ -1,6 +1,7 @@
 // dependency imports
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
+import { Slide } from "react-reveal";
 
 // style imports
 import "./style.min.css";
@@ -36,16 +37,18 @@ const App = () => {
 
   return (
     <div className="app">
-      <div
-        className={`fade-box ${
-          state.mouseOut && state.scrolled && "box-faded"
-        }`}
-        onMouseEnter={() => setState({ ...state, mouseOut: false })}
-        onMouseLeave={() => setState({ ...state, mouseOut: true })}
-      >
-        <Header />
-        <Navbar />
-      </div>
+      <Slide down>
+        <div
+          className={`fade-box ${
+            state.mouseOut && state.scrolled && "box-faded"
+          }`}
+          onMouseEnter={() => setState({ ...state, mouseOut: false })}
+          onMouseLeave={() => setState({ ...state, mouseOut: true })}
+        >
+          <Header />
+          <Navbar />
+        </div>
+      </Slide>
       <div className="route-box">
         <Route exact path="/" component={Landing} />
         <Route exact path="/work" component={Work} />

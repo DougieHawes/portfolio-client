@@ -1,12 +1,11 @@
 // style imports
 import "./style.min.css";
 
+// util component imports
+import { Route1 } from "../utils/routes";
+
 const Contact = () => {
-  return (
-    <div className="route contact">
-      <h2 className="route-title">contact</h2>
-    </div>
-  );
+  return <Route1 path="contact" />;
 };
 
 export default Contact;
