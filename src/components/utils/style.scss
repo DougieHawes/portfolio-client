@@ -1,1 +1,11 @@
 @import "../../variables.scss";
+
+.route {
+  .route-title {
+  }
+  .route-body {
+    * {
+      text-align: left;
+    }
+  }
+}
