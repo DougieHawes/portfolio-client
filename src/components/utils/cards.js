@@ -25,3 +25,13 @@ export const Card1 = ({ image, title, siteLink, codeLink, description }) => (
     </div>
   </Zoom>
 );
+
+export const Card2 = ({ logo, name, destination, data }) => (
+  <a href={destination} target="blank">
+    <div className="card2">
+      <i className={`${logo} card2-info-logo`}></i>
+      <div className="card2-info-key">{name}</div>
+      <div className="card2-info-data">{data}</div>
+    </div>
+  </a>
+);

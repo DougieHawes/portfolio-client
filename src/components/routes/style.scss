@@ -1,5 +1,32 @@
 @import "../../variables.scss";
 
+.contact {
+  .contact-card {
+    background-color: $colour2;
+    border: 1px solid $colour3;
+    margin: 21px auto;
+    min-height: 350px;
+    position: relative;
+    box-shadow: 3px 3px 2px $colour1;
+    width: 600px;
+    .contact-card-info {
+      padding: 9px 2%;
+    }
+    .contact-card-photo {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      width: 90px;
+    }
+    .contact-card-logo {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      width: 280px;
+    }
+  }
+}
+
 .landing {
   display: flex;
   .landing-logo {

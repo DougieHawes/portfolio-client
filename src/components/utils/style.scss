@@ -103,6 +103,26 @@
   }
 }
 
+.card2 {
+  display: grid;
+  grid-template-columns: 21px 80px auto;
+  .card2-info-logo {
+    color: $colour4;
+    font-size: 21px;
+    text-align: center;
+  }
+  .card2-info-key {
+    color: $colour3;
+    display: flex;
+    padding-right: 6px;
+
+    justify-content: flex-end;
+  }
+  .card2-info-data {
+    padding-left: 6px;
+  }
+}
+
 .route {
   padding: 0 5%;
   .route-title {
