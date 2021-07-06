@@ -123,6 +123,42 @@
   }
 }
 
+.post1 {
+  margin: 3px 0;
+  .post1-header {
+    border-bottom: 2px solid $colour3;
+    padding: 6px 2%;
+  }
+  .post1-body {
+    background-color: $colour2;
+    padding: 12px 4%;
+    .post1-body-text {
+      font-size: 12px;
+      max-height: 70px;
+      overflow: hidden;
+      text-align: justify;
+
+      transition: 1.2s max-height ease-in-out;
+    }
+    .post1-body-text-open {
+      max-height: 700px;
+    }
+    .post1-body-toggle {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 6px;
+      .post1-body-toggle-text {
+        color: $colour3;
+      }
+      i {
+        color: $colour4;
+        padding-left: 6px;
+      }
+    }
+  }
+}
+
 .route {
   padding: 0 5%;
   .route-title {
