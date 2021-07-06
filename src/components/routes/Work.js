@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./style.min.css";
 
 // util component imports
+import { Card1 } from "../utils/cards";
 import { Route1 } from "../utils/routes";
 
 const Work = () => {
@@ -144,6 +145,7 @@ const Work = () => {
           </div>
         </div>
       </nav>
+      <div className="work-card-grid"></div>
     </div>
   );
 

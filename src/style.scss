@@ -25,6 +25,7 @@
   background-position: center;
   background-size: 100% auto;
   min-height: 150vh;
+  overflow-y: hidden;
   padding: 0 2%;
   .fade-box {
     height: $header-height;

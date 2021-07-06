@@ -1,8 +1,9 @@
 @import "../../variables.scss";
 
 .landing {
+  display: flex;
   .landing-logo {
-    margin-top: 6vh;
+    margin: 6vh auto 0 auto;
     width: 60vw;
   }
 }
@@ -13,7 +14,6 @@
       color: $colour4;
       font-size: 10px;
       font-style: italic;
-      text-align: center;
     }
     .work-nav-list {
       display: grid;
@@ -23,10 +23,17 @@
         border-bottom: 2px solid rgba(0, 0, 0, 0);
         cursor: pointer;
         text-align: center;
+
+        transition: 0.3s border-color ease-in-out;
       }
       .work-nav-item-selected {
         border-bottom: 2px solid $colour3;
       }
     }
+  }
+  .work-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 0;
   }
 }

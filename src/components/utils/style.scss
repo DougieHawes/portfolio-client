@@ -1,7 +1,113 @@
 @import "../../variables.scss";
 
+.card1 {
+  cursor: pointer;
+  height: 180px;
+  margin: 3px auto;
+  min-height: 180px;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 1%;
+  width: 240px;
+
+  transition: 0.3s background-color ease-in-out;
+  .card1-hover-veneer {
+    background-color: rgba($color: $colour1, $alpha: 0);
+    height: 180px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 240px;
+    z-index: -99;
+
+    transition: 0.3s background-color ease-in-out;
+  }
+  .card1-image {
+    height: 180px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 240px;
+    z-index: -100;
+
+    transition: 2.1s height ease-in-out, 2.1s width ease-in-out,
+      2.1s left ease-in-out, 2.1s top ease-in-out;
+  }
+  .card1-title {
+    font-weight: 100;
+  }
+  .card1-title-dark {
+    left: 4px;
+    position: absolute;
+
+    text-shadow: -0.5px -0.5px 0 $colour2, 0.5px -0.5px 0 $colour2,
+      -0.5px 0.5px 0 $colour2, 0.5px 0.5px 0 $colour2;
+    top: 0;
+  }
+  .card1-hover-box {
+    z-index: 100;
+    * {
+      color: $colour2;
+      opacity: 0;
+
+      transition: 0.9s opacity ease-in-out;
+    }
+    .card1-links {
+      display: flex;
+      justify-content: space-around;
+      padding: 7px 0;
+      .card1-link {
+        font-size: 12px;
+
+        transition: 0.3s color ease-in-out;
+        i {
+          transition: 0.3s color ease-in-out;
+        }
+      }
+      .card1-link:hover {
+        color: $colour4;
+        i {
+          color: $colour3;
+        }
+      }
+    }
+    .card1-description {
+      font-size: 11px;
+      padding: 0 2%;
+      text-align: justify;
+    }
+  }
+  .card1-title-light {
+    bottom: 0;
+    color: $colour2;
+    position: absolute;
+    right: 4px;
+    text-shadow: -0.5px -0.5px 0 $colour1, 0.5px -0.5px 0 $colour1,
+      -0.5px 0.5px 0 $colour1, 0.5px 0.5px 0 $colour1;
+  }
+}
+.card1:hover {
+  .card1-hover-veneer {
+    background-color: rgba($color: $colour1, $alpha: 0.42);
+  }
+  .card1-image {
+    height: 200px;
+    left: -10px;
+    top: -10px;
+    width: 260px;
+  }
+  .card1-hover-box {
+    * {
+      opacity: 1;
+    }
+  }
+}
+
 .route {
+  padding: 0 5%;
   .route-title {
+    font-size: 35px;
+    text-transform: capitalize;
   }
   .route-body {
     * {

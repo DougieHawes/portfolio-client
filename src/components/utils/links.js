@@ -1,3 +1,4 @@
+// style imports
 import "./style.min.css";
 
 export const Link1 = ({ site, logo }) => (
