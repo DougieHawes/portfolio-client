@@ -35,3 +35,14 @@ export const Card2 = ({ logo, name, destination, data }) => (
     </div>
   </a>
 );
+
+export const Card3 = ({ onMouseEnter, onMouseLeave, image, name }) => (
+  <div
+    className="card3"
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
+    <img className="skill-logo" src={image} alt="" />
+    <h3 className="skill-name">{name}</h3>
+  </div>
+);

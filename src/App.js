@@ -36,7 +36,7 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <div className="app" id="top">
       <Slide down>
         <div
           className={`fade-box ${

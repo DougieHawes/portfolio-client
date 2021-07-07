@@ -31,6 +31,7 @@
     height: $header-height;
     position: fixed;
     width: 96%;
+    z-index: 200;
 
     * {
       transition: 0.6s opacity ease-in-out;
