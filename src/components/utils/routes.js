@@ -9,7 +9,7 @@ export const Route1 = ({ path, content }) => (
     <Slide left>
       <h2 className="route-title">{path}</h2>
     </Slide>
-    <Fade delay={700} up>
+    <Fade delay={700}>
       <div className="route-body">{content}</div>
     </Fade>
   </div>

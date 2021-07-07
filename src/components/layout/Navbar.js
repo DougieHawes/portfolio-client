@@ -9,6 +9,7 @@ const Navbar = () => {
           className="navbar-link"
           activeClassName="navbar-link-active"
           to="/work"
+          onClick={() => window.scrollTo(0, 0)}
         >
           WORK
         </NavLink>
@@ -16,6 +17,7 @@ const Navbar = () => {
           className="navbar-link"
           activeClassName="navbar-link-active"
           to="/skills"
+          onClick={() => window.scrollTo(0, 0)}
         >
           SKILLS
         </NavLink>
@@ -23,6 +25,7 @@ const Navbar = () => {
           className="navbar-link"
           activeClassName="navbar-link-active"
           to="/contact"
+          onClick={() => window.scrollTo(0, 0)}
         >
           CONTACT
         </NavLink>
@@ -30,6 +33,7 @@ const Navbar = () => {
           className="navbar-link"
           activeClassName="navbar-link-active"
           to="/blog"
+          onClick={() => window.scrollTo(0, 0)}
         >
           BLOG
         </NavLink>

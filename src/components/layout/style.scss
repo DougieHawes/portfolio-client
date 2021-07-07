@@ -3,8 +3,10 @@
 .header {
   display: flex;
   justify-content: space-around;
+  position: relative;
   .header-stack-box {
     cursor: pointer;
+    text-align: center;
     .header-stack-logo {
       height: 14px;
       width: 14px;
@@ -13,6 +15,26 @@
       color: $colour3;
       font-size: 21px;
       margin-top: -6px;
+    }
+    .header-stack-info {
+      background-color: $colour2;
+      border: none;
+      height: 0;
+      position: absolute;
+      width: 420px;
+
+      transition: 0.3s height ease-in-out;
+    }
+    .header-stack-info-active {
+      border: 1.5px solid $colour4;
+      height: 70px;
+      padding: 3px 1%;
+    }
+    .header-stack-info-left {
+    }
+    .header-stack-info-right {
+      margin-left: -400px;
+      text-align: right;
     }
   }
   .header-link-box {

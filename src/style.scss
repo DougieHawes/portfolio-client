@@ -20,13 +20,21 @@
 }
 
 .app {
-  background-attachment: fixed;
-  background-image: url("./media/layout/background.jpg");
-  background-position: center;
-  background-size: 100% auto;
+  background-color: rgba($color: $colour2, $alpha: 0.42);
+  // background-attachment: fixed;
+  // background-image: url("./media/layout/background.jpg");
+  // background-position: center;
+  // background-size: 100% auto;
   min-height: 101vh;
-  overflow-y: hidden;
+  overflow: hidden;
   padding: 0 2%;
+  .background-video {
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -100;
+  }
   .fade-box {
     height: $header-height;
     position: fixed;

@@ -36,9 +36,10 @@ export const Card2 = ({ logo, name, destination, data }) => (
   </a>
 );
 
-export const Card3 = ({ onMouseEnter, onMouseLeave, image, name }) => (
+export const Card3 = ({ onClick, onMouseEnter, onMouseLeave, image, name }) => (
   <div
     className="card3"
+    onClick={onClick}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >

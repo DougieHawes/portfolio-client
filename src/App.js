@@ -17,6 +17,9 @@ import Skills from "./components/routes/Skills";
 import Contact from "./components/routes/Contact";
 import Blog from "./components/routes/Blog";
 
+// media imports
+import video from "./media/background-video.mp4";
+
 const App = () => {
   const [state, setState] = useState({
     mouseOut: true,
@@ -37,6 +40,9 @@ const App = () => {
 
   return (
     <div className="app" id="top">
+      <video className="background-video" autoPlay loop>
+        <source src={video} type="video/mp4" />
+      </video>
       <Slide down>
         <div
           className={`fade-box ${
