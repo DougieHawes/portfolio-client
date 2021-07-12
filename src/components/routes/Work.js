@@ -21,7 +21,7 @@ const Work = () => {
   const { showApps, showSites, showGames, showEffects } = state;
 
   const getWorks = async () => {
-    const allWorks = await axios.get("http://localhost:8000/work");
+    const allWorks = await axios.get(`${process.env.REACT_APP_API_URL}/work`);
     setWork([...allWorks.data]);
     console.log(work);
   };
@@ -158,15 +158,24 @@ const Work = () => {
         </div>
       </nav>
       <div className="work-card-grid">
-        {work.map((work) => (
-          <Card1
-            key={work._id}
-            title={work.title}
-            siteLink={work.siteLink}
-            codeLink={work.codeLink}
-            description={work.description}
-          />
-        ))}
+        {work.map((work) => {
+          if (
+            (work.category === "app" && showApps) ||
+            (work.category === "site" && showSites) ||
+            (work.category === "game" && showGames) ||
+            (work.category === "effect" && showEffects)
+          ) {
+            return (
+              <Card1
+                key={work._id}
+                title={work.title}
+                siteLink={work.siteLink}
+                codeLink={work.codeLink}
+                description={work.description}
+              />
+            );
+          }
+        })}
       </div>
     </div>
   );

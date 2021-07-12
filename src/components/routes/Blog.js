@@ -15,7 +15,7 @@ const Blog = () => {
   const { posts } = state;
 
   const getPosts = async () => {
-    const allPosts = await axios.get("http://localhost:8000/blog");
+    const allPosts = await axios.get(`${process.env.REACT_APP_API_URL}/blog`);
     setState({ posts: [...allPosts.data] });
     console.log(posts);
   };

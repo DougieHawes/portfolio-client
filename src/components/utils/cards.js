@@ -9,6 +9,7 @@ export const Card1 = ({
   title,
   siteLink,
   codeLink,
+  category,
   description,
   date,
 }) => (
