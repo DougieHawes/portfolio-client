@@ -31,7 +31,12 @@ const Header = () => {
       <div className="header-stack-box">
         <div
           onMouseEnter={() =>
-            setState({ ...state, showMongo: !state.showMongo })
+            setState({
+              showExpress: false,
+              showReact: false,
+              showNode: false,
+              showMongo: true,
+            })
           }
           onMouseLeave={() => setState({ ...state, showMongo: false })}
         >
@@ -44,11 +49,21 @@ const Header = () => {
           }`}
           onMouseEnter={() => setState({ ...state, showMongo: true })}
           onMouseLeave={() => setState({ ...state, showMongo: false })}
-        ></div>
+        >
+          <span>MongoDB</span> a source-available cross-platform
+          document-oriented database program using a NoSQL JSON-like database.
+        </div>
       </div>
       <div className="header-stack-box">
         <div
-          onMouseEnter={() => setState({ ...state, showExpress: true })}
+          onMouseEnter={() =>
+            setState({
+              showMongo: false,
+              showReact: false,
+              showNode: false,
+              showExpress: true,
+            })
+          }
           onMouseLeave={() => setState({ ...state, showExpress: false })}
         >
           <img className="header-stack-logo" src={expressLogo} alt="" />
@@ -60,7 +75,10 @@ const Header = () => {
           }`}
           onMouseEnter={() => setState({ ...state, showExpress: true })}
           onMouseLeave={() => setState({ ...state, showExpress: false })}
-        ></div>
+        >
+          <span>Express.js</span> a back end web application framework for
+          Node.js designed for building web applications and APIs.
+        </div>
       </div>
       <div className="header-link-box">
         <Link1
@@ -82,7 +100,14 @@ const Header = () => {
       </div>
       <div className="header-stack-box">
         <div
-          onMouseEnter={() => setState({ ...state, showReact: true })}
+          onMouseEnter={() =>
+            setState({
+              showMongo: false,
+              showExpress: false,
+              showNode: false,
+              showReact: true,
+            })
+          }
           onMouseLeave={() => setState({ ...state, showReact: false })}
         >
           <img className="header-stack-logo" src={reactLogo} alt="" />
@@ -94,11 +119,22 @@ const Header = () => {
           }`}
           onMouseEnter={() => setState({ ...state, showReact: true })}
           onMouseLeave={() => setState({ ...state, showReact: false })}
-        ></div>
+        >
+          <span>React.js</span> an open-source JavaScript library for building
+          user interfaces or UI components, used as a base in the development of
+          single-page applications.
+        </div>
       </div>
       <div className="header-stack-box">
         <div
-          onMouseEnter={() => setState({ ...state, showNode: true })}
+          onMouseEnter={() =>
+            setState({
+              showMongo: false,
+              showExpress: false,
+              showReact: false,
+              showNode: true,
+            })
+          }
           onMouseLeave={() => setState({ ...state, showNode: false })}
         >
           <img className="header-stack-logo" src={nodeLogo} alt="" />
@@ -110,7 +146,11 @@ const Header = () => {
           }`}
           onMouseEnter={() => setState({ ...state, showNode: true })}
           onMouseLeave={() => setState({ ...state, showNode: false })}
-        ></div>
+        >
+          <span>Node.js</span> an open-source, cross-platform, back-end
+          JavaScript runtime environment that executes JavaScript code outside a
+          web browser.
+        </div>
       </div>
     </div>
   );

@@ -103,10 +103,11 @@
 
 .card2 {
   display: grid;
-  grid-template-columns: 21px 80px auto;
+  grid-template-columns: 28px 80px auto;
   .card2-info-logo {
     color: $colour4;
     font-size: 21px;
+    margin: 0 auto;
     text-align: center;
   }
   .card2-info-key {
@@ -149,6 +150,11 @@
   .post1-header {
     border-bottom: 2px solid $colour3;
     padding: 6px 2%;
+    .close-icon {
+      cursor: pointer;
+      float: right;
+      margin-top: -21px;
+    }
   }
   .post1-body {
     background-color: $colour2;

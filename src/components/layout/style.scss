@@ -20,10 +20,16 @@
       background-color: $colour2;
       border: none;
       height: 0;
+      overflow: hidden;
       position: absolute;
+      text-align: left;
       width: 420px;
 
       transition: 0.3s height ease-in-out;
+      span {
+        color: $colour3;
+        font-weight: 600;
+      }
     }
     .header-stack-info-active {
       border: 1.5px solid $colour4;

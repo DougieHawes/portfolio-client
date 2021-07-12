@@ -4,7 +4,14 @@ import { Zoom } from "react-reveal";
 // style imports
 import "./style.min.css";
 
-export const Card1 = ({ image, title, siteLink, codeLink, description }) => (
+export const Card1 = ({
+  image,
+  title,
+  siteLink,
+  codeLink,
+  description,
+  date,
+}) => (
   <Zoom>
     <div className="card card1">
       <div className="card1-hover-veneer"></div>

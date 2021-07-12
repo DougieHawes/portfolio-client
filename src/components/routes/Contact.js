@@ -43,6 +43,12 @@ const Contact = () => {
             destination="https://www.linkedin.com/in/dougiehawes/"
             data="dougiehawes"
           />
+          <Card2
+            logo="fab fa-youtube"
+            name="YouTube"
+            destination="https://www.youtube.com/channel/UCg6zwHai7Lig5CGcWkWfqTA"
+            data="Dougie_Hawes"
+          />
         </div>
         <img className="contact-card-photo" src={avatar} alt="" />
         <img className="contact-card-logo" src={titleLogo} alt="" />

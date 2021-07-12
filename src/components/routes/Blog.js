@@ -1,3 +1,7 @@
+// dependency imports
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 // style imports
 import "./style.min.css";
 
@@ -6,19 +10,32 @@ import { Post1 } from "../utils/posts";
 import { Route1 } from "../utils/routes";
 
 const Blog = () => {
+  const [state, setState] = useState({ posts: [] });
+
+  const { posts } = state;
+
+  const getPosts = async () => {
+    const allPosts = await axios.get("http://localhost:8000/blog");
+    setState({ posts: [...allPosts.data] });
+    console.log(posts);
+  };
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
   const content = (
     <div className="route-content">
       <div className="blog-posts">
-        <Post1
-          title="My Second Post"
-          date="06/07/2021"
-          text="Nulla vel vestibulum turpis. Vestibulum nec mauris sit amet eros facilisis tempus. Etiam bibendum lacus eu sagittis gravida. Ut dapibus dolor id nisl dictum, nec aliquet ligula gravida. Suspendisse fringilla ante quis nunc vestibulum, sodales interdum enim consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at urna feugiat urna molestie facilisis. Aliquam dui nisl, mattis id justo sodales, vulputate finibus ligula. Mauris at auctor magna, at fermentum metus. Morbi nec leo sed nibh consequat pulvinar. Nunc porta leo et finibus elementum. Vivamus commodo metus ut ante pulvinar, sit amet fringilla mauris mattis. Praesent sagittis porta mi, at egestas neque volutpat scelerisque. In bibendum interdum consectetur. Suspendisse quam ante, faucibus et lectus sed, volutpat placerat lacus. Nunc tristique ipsum posuere sem lacinia, quis malesuada erat maximus. Maecenas purus ipsum, suscipit a mollis sit amet, tempor venenatis nunc. Quisque volutpat eget orci tempus tristique. Pellentesque vel sapien lectus. Sed dignissim sollicitudin metus. Morbi fringilla congue nunc, sit amet semper arcu luctus vulputate. Nam fringilla mi nec diam iaculis, eget imperdiet sem sagittis. Aenean metus tortor, porta eu neque non, scelerisque efficitur leo. Quisque pulvinar sit amet nisl a viverra. Maecenas vel pellentesque dolor, id blandit purus. Phasellus condimentum felis a urna lobortis varius. Ut quis laoreet dolor. Pellentesque vulputate metus sapien, eu tempus elit tincidunt nec. Nullam tristique sed leo non gravida. Nam hendrerit, sem finibus euismod elementum, mi leo venenatis neque, at euismod purus lacus id ante. Donec efficitur lacus at quam feugiat laoreet. Donec malesuada eget erat et gravida. Praesent porta massa felis. Suspendisse ut varius tortor. Vestibulum pharetra, ex vel blandit venenatis, neque purus sagittis turpis, non vestibulum mauris nisl et diam. Quisque porttitor, nisi et pharetra gravida, mi massa ultricies lacus, quis tincidunt enim arcu vel dui. Nunc sit amet interdum diam, ut sagittis lorem. Mauris faucibus erat sit amet erat finibus dapibus. Ut sodales gravida dui in euismod. Integer quis varius tortor, non faucibus ipsum. Aliquam posuere enim a accumsan placerat. Integer aliquet purus id nulla mollis, a elementum nisl pharetra. Quisque pellentesque accumsan aliquet. Fusce et arcu sapien. Sed auctor facilisis dui, quis tincidunt ex finibus in. Nunc scelerisque malesuada erat non faucibus. Nunc non magna purus. Donec rhoncus interdum augue, sed ornare mauris auctor ut. Pellentesque mattis, metus sed malesuada sagittis, dolor nisi interdum erat, euismod efficitur ante magna ut elit. Aenean ornare eget leo at tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus in tristique lorem. Aenean mattis sit amet enim id mattis. Aliquam venenatis."
-        />
-        <Post1
-          title="My First Post"
-          date="06/07/2021"
-          text="Nulla vel vestibulum turpis. Vestibulum nec mauris sit amet eros facilisis tempus. Etiam bibendum lacus eu sagittis gravida. Ut dapibus dolor id nisl dictum, nec aliquet ligula gravida. Suspendisse fringilla ante quis nunc vestibulum, sodales interdum enim consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at urna feugiat urna molestie facilisis. Aliquam dui nisl, mattis id justo sodales, vulputate finibus ligula. Mauris at auctor magna, at fermentum metus. Morbi nec leo sed nibh consequat pulvinar. Nunc porta leo et finibus elementum. Vivamus commodo metus ut ante pulvinar, sit amet fringilla mauris mattis. Praesent sagittis porta mi, at egestas neque volutpat scelerisque. In bibendum interdum consectetur. Suspendisse quam ante, faucibus et lectus sed, volutpat placerat lacus. Nunc tristique ipsum posuere sem lacinia, quis malesuada erat maximus. Maecenas purus ipsum, suscipit a mollis sit amet, tempor venenatis nunc. Quisque volutpat eget orci tempus tristique. Pellentesque vel sapien lectus. Sed dignissim sollicitudin metus. Morbi fringilla congue nunc, sit amet semper arcu luctus vulputate. Nam fringilla mi nec diam iaculis, eget imperdiet sem sagittis. Aenean metus tortor, porta eu neque non, scelerisque efficitur leo. Quisque pulvinar sit amet nisl a viverra. Maecenas vel pellentesque dolor, id blandit purus. Phasellus condimentum felis a urna lobortis varius. Ut quis laoreet dolor. Pellentesque vulputate metus sapien, eu tempus elit tincidunt nec. Nullam tristique sed leo non gravida. Nam hendrerit, sem finibus euismod elementum, mi leo venenatis neque, at euismod purus lacus id ante. Donec efficitur lacus at quam feugiat laoreet. Donec malesuada eget erat et gravida. Praesent porta massa felis. Suspendisse ut varius tortor. Vestibulum pharetra, ex vel blandit venenatis, neque purus sagittis turpis, non vestibulum mauris nisl et diam. Quisque porttitor, nisi et pharetra gravida, mi massa ultricies lacus, quis tincidunt enim arcu vel dui. Nunc sit amet interdum diam, ut sagittis lorem. Mauris faucibus erat sit amet erat finibus dapibus. Ut sodales gravida dui in euismod. Integer quis varius tortor, non faucibus ipsum. Aliquam posuere enim a accumsan placerat. Integer aliquet purus id nulla mollis, a elementum nisl pharetra. Quisque pellentesque accumsan aliquet. Fusce et arcu sapien. Sed auctor facilisis dui, quis tincidunt ex finibus in. Nunc scelerisque malesuada erat non faucibus. Nunc non magna purus. Donec rhoncus interdum augue, sed ornare mauris auctor ut. Pellentesque mattis, metus sed malesuada sagittis, dolor nisi interdum erat, euismod efficitur ante magna ut elit. Aenean ornare eget leo at tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus in tristique lorem. Aenean mattis sit amet enim id mattis. Aliquam venenatis."
-        />
+        {posts.map((post) => (
+          <Post1
+            key={post._id}
+            imageDark={post.imageDark}
+            title={post.title}
+            date={post.date}
+            text={post.text}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 // dependency imports
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 // style imports
 import "./style.min.css";
@@ -15,8 +16,19 @@ const Work = () => {
     showGames: true,
     showEffects: true,
   });
+  const [work, setWork] = useState([]);
 
   const { showApps, showSites, showGames, showEffects } = state;
+
+  const getWorks = async () => {
+    const allWorks = await axios.get("http://localhost:8000/work");
+    setWork([...allWorks.data]);
+    console.log(work);
+  };
+
+  useEffect(() => {
+    getWorks();
+  }, []);
 
   const appsClick = () => {
     if (showApps) {
@@ -145,7 +157,17 @@ const Work = () => {
           </div>
         </div>
       </nav>
-      <div className="work-card-grid"></div>
+      <div className="work-card-grid">
+        {work.map((work) => (
+          <Card1
+            key={work._id}
+            title={work.title}
+            siteLink={work.siteLink}
+            codeLink={work.codeLink}
+            description={work.description}
+          />
+        ))}
+      </div>
     </div>
   );
 
