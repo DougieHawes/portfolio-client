@@ -21,10 +21,10 @@
 
 .app {
   background-color: rgba($color: $colour2, $alpha: 0.42);
-  // background-attachment: fixed;
+  background-attachment: fixed;
   // background-image: url("./media/layout/background.jpg");
-  // background-position: center;
-  // background-size: 100% auto;
+  background-position: center;
+  background-size: 100% auto;
   min-height: 101vh;
   overflow: hidden;
   padding: 0 2%;
@@ -52,5 +52,11 @@
   }
   .route-box {
     padding-top: $header-height;
+  }
+  .toggle-box {
+    bottom: 35px;
+    cursor: pointer;
+    position: fixed;
+    right: 7%;
   }
 }

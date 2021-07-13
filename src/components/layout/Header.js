@@ -85,6 +85,7 @@ const Header = () => {
           site="https://github.com/DougieHawes"
           logo="fab fa-github-square"
         />
+        <span class="header-link-text">visit my GitHub</span>
       </div>
       <div className="header-name-box">
         <Link to="/">
@@ -97,6 +98,7 @@ const Header = () => {
           site="https://www.linkedin.com/in/dougiehawes/"
           logo="fab fa-linkedin"
         />
+        <span class="header-link-text">visit my LinkedIn</span>
       </div>
       <div className="header-stack-box">
         <div
